@@ -36,13 +36,13 @@ Below is a **compact version** you can paste immediately; it’s a strict, task-
 
    * `POST /receipts/upload` → presign in MinIO, enqueue `ocr:process`.
    * `POST /receipts` (manual create), `GET /receipts` (filters+pagination), `PATCH /receipts/:id` (apply **delta** corrections).
-   * `GET /vendors/suggest?q=` (pg\_trgm fuzzy).
+   * `GET /vendors/suggest?q=` (pg_trgm fuzzy).
    * GDPR: `GET /gdpr/export`, `DELETE /gdpr/delete` (30-day job).
 
 2. **DB**
 
    * Models: organizations, users, receipts, vendors, line\_items, corrections.
-   * Indices for org+date, status, content\_hash; optional **monthly partitions**.
+   * Indices for org+date, status, content_hash; optional **monthly partitions**.
    * Enable **RLS** policy for tenant isolation.
 
 3. **Workers (OCR)**
