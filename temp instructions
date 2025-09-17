@@ -104,7 +104,7 @@ Below is a **compact version** you can paste immediately; it’s a strict, task-
 
 ---
 
-Want me to drop these instructions into `/docs/codex_instructions.md` in your **master doc repo** or wire a first “scaffold\:repo” PR using this prompt?
+Want me to drop these instructions into `/docs/codex_instructions.md` in your **master doc repo** or wire a first “scaffold:repo” PR using this prompt?
 
 [1]: https://platform.openai.com/docs/guides/production-best-practices/text-generation?utm_source=chatgpt.com "Production best practices - OpenAI API"
 [2]: https://openai.com/security-and-privacy/?utm_source=chatgpt.com "Security & privacy - OpenAI"
