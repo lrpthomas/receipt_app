@@ -153,10 +153,10 @@ PHASE_3_CI_CD_PIPELINE:
           node-version: [18.x, 20.x]
       
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         
         - name: Use Node.js ${{ matrix.node-version }}
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: ${{ matrix.node-version }}
         
@@ -180,7 +180,7 @@ PHASE_3_CI_CD_PIPELINE:
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging'
       
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         
         - name: Configure AWS credentials
           uses: aws-actions/configure-aws-credentials@v2
@@ -209,7 +209,7 @@ PHASE_3_CI_CD_PIPELINE:
       if: github.ref == 'refs/heads/main'
       
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         
         - name: Configure AWS credentials
           uses: aws-actions/configure-aws-credentials@v2
@@ -765,7 +765,7 @@ PHASE_4_SESSION_REAL_TIME:
           activity.location
         );
         
-        const maxSpeed = 1000; // km/h
+        const maxSpeed = parseInt(process.env.MAX_TRAVEL_SPEED_KMH || '1000'); // km/h
         const possibleDistance = (timeDiff / 3600000) * maxSpeed;
         
         if (distance > possibleDistance) {
