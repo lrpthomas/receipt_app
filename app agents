@@ -1608,9 +1608,8 @@ PHASE_3_TEMPLATE_RECOGNITION:
       const normalized = resized.div(255.0);
       
       // Use pre-trained MobileNet for feature extraction
-      const mobileNet = await tf.loadLayersModel(
-        'https://tfhub.dev/google/tfjs-model/imagenet/mobilenet_v2_100_224/feature_vector/5/default/1'
-      );
+      const modelUrl = process.env.TFHUB_MOBILENET_URL || 'https://tfhub.dev/google/tfjs-model/imagenet/mobilenet_v2_100_224/feature_vector/5/default/1';
+      const mobileNet = await tf.loadLayersModel(modelUrl);
       
       const features = mobileNet.predict(normalized.expandDims(0)) as tf.Tensor;
       const featureArray = await features.array();
