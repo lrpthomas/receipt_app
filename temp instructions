@@ -1,6 +1,6 @@
 Got it—here are **Codex-style build instructions** for your app, packaged as a reusable system/instructions prompt you can drop into Cursor, Copilot Chat, or any code LLM. I also saved a full, ready-to-use file:
 
-* [Download **codex\_instructions.md**](sandbox:/mnt/data/codex_instructions.md)
+* [Download **codex_instructions.md**](sandbox:/mnt/data/codex_instructions.md)
 
 Below is a **compact version** you can paste immediately; it’s a strict, task-driving prompt that enforces your architecture (integer cents, ISO dates, Zod, OCR pipeline, RLS, MinIO, RN offline, etc.).
 
