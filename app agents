@@ -191,7 +191,7 @@ PHASE_3_CI_CD_PIPELINE:
         
         - name: Login to Amazon ECR
           id: login-ecr
-          uses: aws-actions/amazon-ecr-get-login@v1
+          uses: aws-actions/amazon-ecr-login@v2
         
         - name: Build, tag, and push image to Amazon ECR
           env:
